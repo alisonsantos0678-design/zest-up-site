@@ -454,7 +454,7 @@ function Index() {
           </div>
 
           <div className="text-center mt-14">
-            <Btn href="#contato" variant="light">
+            <Btn href="#contato" variant="ghost">
               Fale com um Especialista
             </Btn>
           </div>
