@@ -118,24 +118,19 @@ function useReveal() {
 function Btn({
   href,
   children,
-  variant = "outline",
+  variant = "gold",
   className = "",
 }: {
   href: string;
   children: React.ReactNode;
-  variant?: "outline" | "solid" | "light";
+  variant?: "gold" | "ghost" | "outline";
   className?: string;
 }) {
-  const base =
-    "inline-flex items-center gap-2 px-8 py-3.5 text-[14.5px] tracking-wide font-body cursor-pointer transition-all duration-300 border";
-  const styles = {
-    outline: "border-gold text-navy bg-transparent hover:bg-gold hover:text-navy",
-    solid: "border-gold bg-gold text-navy hover:bg-transparent hover:text-gold-light",
-    light: "border-white/55 text-white bg-transparent hover:bg-white hover:text-navy hover:border-white",
-  }[variant];
+  const cls =
+    variant === "gold" ? "btn-gold" : variant === "ghost" ? "btn-ghost-gold" : "btn-outline-gold";
   return (
-    <a href={href} className={`${base} ${styles} ${className}`}>
-      {children}
+    <a href={href} className={`${cls} ${className}`}>
+      <span>{children}</span>
       <span aria-hidden>→</span>
     </a>
   );
@@ -225,18 +220,16 @@ function Index() {
               className="absolute inset-0 z-[1] pointer-events-none"
               style={{ background: "radial-gradient(ellipse at 20% 80%, rgba(201,161,90,.15), transparent 55%)" }}
             />
-            <div className="relative z-[2] max-w-[1180px] mx-auto px-8 w-full">
-              <div className="max-w-[560px]">
-                <span className="inline-block mb-4 italic tracking-[0.14em] uppercase text-[12.5px] text-gold">
-                  {s.eyebrow}
-                </span>
-                <h1 className="text-white mb-5" style={{ fontSize: "clamp(34px,5vw,58px)" }}>
-                  {s.title}
-                </h1>
-                <p className="text-cream/90 text-[17px] max-w-[460px] mb-8">{s.text}</p>
-                <div className="flex gap-3.5 flex-wrap">
+            <div className="relative z-[2] max-w-[1280px] mx-auto px-8 md:px-12 w-full">
+              <div className="max-w-[880px]">
+                <span className="hero-eyebrow mb-7">{s.eyebrow}</span>
+                <h1 className="hero-display mt-6 mb-8">{s.title}</h1>
+                <p className="text-cream/90 text-[19px] md:text-[20px] leading-relaxed max-w-[560px] mb-10 font-light">
+                  {s.text}
+                </p>
+                <div className="flex gap-4 flex-wrap">
                   {s.btns.map((b, k) => (
-                    <Btn key={k} href={b.href} variant={b.solid ? "solid" : "light"}>
+                    <Btn key={k} href={b.href} variant={b.solid ? "gold" : "ghost"}>
                       {b.label}
                     </Btn>
                   ))}
@@ -461,7 +454,7 @@ function Index() {
           </div>
 
           <div className="text-center mt-14">
-            <Btn href="#contato" variant="light">
+            <Btn href="#contato" variant="ghost">
               Fale com um Especialista
             </Btn>
           </div>
