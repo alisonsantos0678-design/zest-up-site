@@ -220,18 +220,16 @@ function Index() {
               className="absolute inset-0 z-[1] pointer-events-none"
               style={{ background: "radial-gradient(ellipse at 20% 80%, rgba(201,161,90,.15), transparent 55%)" }}
             />
-            <div className="relative z-[2] max-w-[1180px] mx-auto px-8 w-full">
-              <div className="max-w-[560px]">
-                <span className="inline-block mb-4 italic tracking-[0.14em] uppercase text-[12.5px] text-gold">
-                  {s.eyebrow}
-                </span>
-                <h1 className="text-white mb-5" style={{ fontSize: "clamp(34px,5vw,58px)" }}>
-                  {s.title}
-                </h1>
-                <p className="text-cream/90 text-[17px] max-w-[460px] mb-8">{s.text}</p>
-                <div className="flex gap-3.5 flex-wrap">
+            <div className="relative z-[2] max-w-[1280px] mx-auto px-8 md:px-12 w-full">
+              <div className="max-w-[880px]">
+                <span className="hero-eyebrow mb-7">{s.eyebrow}</span>
+                <h1 className="hero-display mt-6 mb-8">{s.title}</h1>
+                <p className="text-cream/90 text-[19px] md:text-[20px] leading-relaxed max-w-[560px] mb-10 font-light">
+                  {s.text}
+                </p>
+                <div className="flex gap-4 flex-wrap">
                   {s.btns.map((b, k) => (
-                    <Btn key={k} href={b.href} variant={b.solid ? "solid" : "light"}>
+                    <Btn key={k} href={b.href} variant={b.solid ? "gold" : "ghost"}>
                       {b.label}
                     </Btn>
                   ))}
