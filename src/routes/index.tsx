@@ -118,24 +118,19 @@ function useReveal() {
 function Btn({
   href,
   children,
-  variant = "outline",
+  variant = "gold",
   className = "",
 }: {
   href: string;
   children: React.ReactNode;
-  variant?: "outline" | "solid" | "light";
+  variant?: "gold" | "ghost" | "outline";
   className?: string;
 }) {
-  const base =
-    "inline-flex items-center gap-2 px-8 py-3.5 text-[14.5px] tracking-wide font-body cursor-pointer transition-all duration-300 border";
-  const styles = {
-    outline: "border-gold text-navy bg-transparent hover:bg-gold hover:text-navy",
-    solid: "border-gold bg-gold text-navy hover:bg-transparent hover:text-gold-light",
-    light: "border-white/55 text-white bg-transparent hover:bg-white hover:text-navy hover:border-white",
-  }[variant];
+  const cls =
+    variant === "gold" ? "btn-gold" : variant === "ghost" ? "btn-ghost-gold" : "btn-outline-gold";
   return (
-    <a href={href} className={`${base} ${styles} ${className}`}>
-      {children}
+    <a href={href} className={`${cls} ${className}`}>
+      <span>{children}</span>
       <span aria-hidden>→</span>
     </a>
   );
