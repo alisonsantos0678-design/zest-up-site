@@ -27,7 +27,7 @@ const slides = [
     ],
   },
   {
-    img: flavio1.url,
+    img: robernei1.url,
     eyebrow: "Dr Flavio Alencar · Direito Criminal",
     title: (
       <>
@@ -41,7 +41,7 @@ const slides = [
     ],
   },
   {
-    img: robernei1.url,
+    img: flavio1.url,
     eyebrow: "Dr Robernei Marchezi · Direito Trabalhista",
     title: (
       <>
@@ -300,7 +300,7 @@ function Index() {
           <div className="grid md:grid-cols-2 gap-14">
             {[
               {
-                img: flavio2.url,
+                img: robernei2.url,
                 role: "Direito Criminal",
                 name: "Dr Flavio Alencar",
                 paras: [
@@ -316,7 +316,7 @@ function Index() {
                 cta: "Falar com Dr Flavio Alencar",
               },
               {
-                img: robernei2.url,
+                img: flavio2.url,
                 role: "Direito Trabalhista",
                 name: "Dr Robernei Marchezi",
                 paras: [
