@@ -278,7 +278,7 @@ function Index() {
 
         {/* scroll hint */}
         <div className="absolute left-8 bottom-8 z-[5] hidden md:flex flex-col items-center gap-2 text-gold-light/70 text-xs tracking-widest floaty">
-          <span className="rotate-90 origin-center mt-4">SCROLL</span>
+          <span className="rotate-90 origin-center mt-4"></span>
           <span className="w-px h-10 bg-gold-light/40" />
         </div>
       </section>
