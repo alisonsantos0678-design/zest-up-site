@@ -339,11 +339,12 @@ function Index() {
                 onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "var(--shadow-elegant)")}
                 onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "0 1px 0 rgba(0,0,0,0.02)")}
               >
-                <div className="h-[380px] overflow-hidden relative">
+                <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] overflow-hidden bg-navy/5">
                   <img
                     src={law.img}
                     alt={law.name}
-                    className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-105"
                     style={{ objectPosition: "center 20%" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
