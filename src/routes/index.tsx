@@ -349,7 +349,7 @@ function Index() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
                 </div>
-                <div className="px-9 pt-9 pb-10">
+                <div className="px-5 pt-7 pb-8 sm:px-9 sm:pt-9 sm:pb-10">
                   <span className="block italic text-gold text-[13.5px] tracking-widest uppercase mb-2">{law.role}</span>
                   <h3 className="text-[29px] mb-4">{law.name}</h3>
                   {law.paras.map((p, i) => (
