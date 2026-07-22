@@ -55,6 +55,10 @@
 
 @layer base {
   * { border-color: var(--border); }
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   html { scroll-behavior: smooth; }
   body {
     background: var(--background);
@@ -63,13 +67,16 @@
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
+  img { max-width: 100%; height: auto; display: block; }
   h1, h2, h3, h4 {
     font-family: var(--font-serif);
     color: var(--navy);
     font-weight: 600;
     line-height: 1.15;
+    overflow-wrap: break-word;
   }
 }
+
 
 /* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }

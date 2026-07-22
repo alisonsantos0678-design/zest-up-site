@@ -161,7 +161,7 @@ function Index() {
     <div className="bg-white text-ink">
       {/* HEADER */}
       <header className="fixed top-0 inset-x-0 z-50 border-b border-gold/25 backdrop-blur-md" style={{ background: "rgba(15,26,46,0.92)" }}>
-        <div className="max-w-[1180px] mx-auto px-8 py-[18px] flex items-center justify-between">
+        <div className="max-w-[1180px] mx-auto px-4 sm:px-8 py-[18px] flex items-center justify-between">
           <a href="#topo" className="text-white font-serif text-[22px] tracking-wide">
             Alencar <span className="text-gold">&</span> Marchezi
           </a>
@@ -220,7 +220,7 @@ function Index() {
               className="absolute inset-0 z-[1] pointer-events-none"
               style={{ background: "radial-gradient(ellipse at 20% 80%, rgba(201,161,90,.15), transparent 55%)" }}
             />
-            <div className="relative z-[2] max-w-[1280px] mx-auto px-8 md:px-12 w-full">
+            <div className="relative z-[2] max-w-[1280px] mx-auto px-4 sm:px-8 md:px-12 w-full">
               <div className="max-w-[880px]">
                 <span className="hero-eyebrow mb-7">{s.eyebrow}</span>
                 <h1 className="hero-display mt-6 mb-8">{s.title}</h1>
@@ -285,7 +285,7 @@ function Index() {
 
       {/* SOBRE */}
       <section id="sobre" className="bg-cream py-28">
-        <div className="max-w-[1180px] mx-auto px-8">
+        <div className="max-w-[1180px] mx-auto px-4 sm:px-8">
           <div className="text-center max-w-[640px] mx-auto mb-16 reveal">
             <span className="inline-block mb-4 italic tracking-[0.14em] uppercase text-[12.5px] text-gold">Quem Somos</span>
             <h2 className="mb-4" style={{ fontSize: "clamp(30px,3.6vw,42px)" }}>
@@ -349,7 +349,7 @@ function Index() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
                 </div>
-                <div className="px-9 pt-9 pb-10">
+                <div className="px-5 pt-7 pb-8 sm:px-9 sm:pt-9 sm:pb-10">
                   <span className="block italic text-gold text-[13.5px] tracking-widest uppercase mb-2">{law.role}</span>
                   <h3 className="text-[29px] mb-4">{law.name}</h3>
                   {law.paras.map((p, i) => (
@@ -381,7 +381,7 @@ function Index() {
 
       {/* AREAS */}
       <section id="areas" className="py-28 bg-white">
-        <div className="max-w-[1180px] mx-auto px-8">
+        <div className="max-w-[1180px] mx-auto px-4 sm:px-8">
           <div className="text-center max-w-[640px] mx-auto mb-16 reveal">
             <span className="inline-block mb-4 italic tracking-[0.14em] uppercase text-[12.5px] text-gold">Especialidades</span>
             <h2 className="mb-4" style={{ fontSize: "clamp(30px,3.6vw,42px)" }}>
@@ -430,7 +430,7 @@ function Index() {
           className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full opacity-10 pointer-events-none"
           style={{ background: "radial-gradient(circle, var(--gold-light) 0%, transparent 60%)" }}
         />
-        <div className="max-w-[1180px] mx-auto px-8 relative">
+        <div className="max-w-[1180px] mx-auto px-4 sm:px-8 relative">
           <div className="text-center max-w-[640px] mx-auto mb-16 reveal">
             <span className="inline-block mb-4 italic tracking-[0.14em] uppercase text-[12.5px] text-gold">Nosso Diferencial</span>
             <h2 className="text-white mb-4" style={{ fontSize: "clamp(30px,3.6vw,42px)" }}>
@@ -444,7 +444,7 @@ function Index() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gold-light/20 border border-gold-light/20 reveal">
             {porque.map((c) => (
-              <div key={c.n} className="p-10 group transition-colors duration-500" style={{ background: "var(--navy-2)" }}>
+              <div key={c.n} className="p-6 sm:p-10 group transition-colors duration-500" style={{ background: "var(--navy-2)" }}>
                 <div className="w-12 h-12 border border-gold rounded-full flex items-center justify-center mb-6 text-gold-light font-serif italic text-[19px] transition-all group-hover:bg-gold group-hover:text-navy group-hover:rotate-[360deg] duration-700">
                   {c.n}
                 </div>
@@ -464,7 +464,7 @@ function Index() {
 
       {/* CTA / FORM */}
       <section id="contato" className="bg-cream py-28">
-        <div className="max-w-[1180px] mx-auto px-8">
+        <div className="max-w-[1180px] mx-auto px-4 sm:px-8">
           <div className="grid lg:grid-cols-[.9fr_1.1fr] gap-16 items-center">
             <div className="reveal">
               <span className="inline-block mb-4 italic tracking-[0.14em] uppercase text-[12.5px] text-gold">Fale Conosco</span>
@@ -493,7 +493,7 @@ function Index() {
             </div>
 
             <form
-              className="bg-white border border-line p-12 reveal relative"
+              className="bg-white border border-line p-6 sm:p-10 md:p-12 reveal relative"
               style={{ boxShadow: "var(--shadow-elegant)" }}
               onSubmit={(e) => {
                 e.preventDefault();
@@ -539,7 +539,7 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="bg-navy pt-12 pb-7 border-t border-gold/20">
-        <div className="max-w-[1180px] mx-auto px-8">
+        <div className="max-w-[1180px] mx-auto px-4 sm:px-8">
           <div className="flex flex-wrap justify-between items-center gap-5 pb-6 mb-6 border-b border-white/10">
             <div className="text-white font-serif text-[20px]">
               Alencar <span className="text-gold">&</span> Marchezi
