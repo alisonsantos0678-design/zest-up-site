@@ -344,7 +344,6 @@ function Index() {
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
                 </div>
                 <div className="px-5 pt-7 pb-8 sm:px-9 sm:pt-9 sm:pb-10">
-                  {law.role && <span className="block italic text-gold text-[13.5px] tracking-widest uppercase mb-2">{law.role}</span>}
                   <h3 className="text-[29px] mb-4">{law.name}</h3>
                   {law.paras.map((p, i) => (
                     <p key={i} className="text-ink-soft text-[15.5px] mb-3.5">
@@ -355,17 +354,7 @@ function Index() {
                     <span className="block text-xs tracking-[0.1em] uppercase text-navy mb-2.5 font-semibold">
                       Formação e Atuação
                     </span>
-                    {law.bio ? (
-                      <p className="text-ink-soft text-[14.5px] leading-relaxed">{law.bio}</p>
-                    ) : (
-                      <ul className="list-none">
-                        {law.items?.map((it) => (
-                          <li key={it} className="relative pl-4 text-ink-soft text-[14.5px] mb-2 before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-1.5 before:h-px before:bg-gold">
-                            {it}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                    <p className="text-ink-soft text-[14.5px] leading-relaxed">{law.bio}</p>
                   </div>
                   <Btn href="#contato" className="w-full justify-center mt-7">
                     {law.cta}
