@@ -87,6 +87,12 @@ const areas = [
     tag: "Dr Robernei Marchezi",
     desc: "Atuação em contratos, cobranças, indenizações e demais questões cíveis, com análise detalhada de cada situação para propor a estratégia mais segura ao cliente. O escritório acompanha o processo do início ao fim, mantendo o cliente informado sobre cada etapa e decisão do caso.",
   },
+  {
+    num: "06",
+    title: "Previdenciário",
+    tag: "Alencar & Marchezi",
+    desc: "Através de parceria atuamos em ações relacionadas a aposentadorias, auxílio acidente, auxílio reclusão, pensão por morte, salário família, salário maternidade, benefícios assistenciais e de legislação específica, entre outros.",
+  },
 ];
 
 const porque = [
