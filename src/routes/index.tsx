@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
 const slides = [
   {
     img: "/assets/hero-robernei-new.jpeg",
-    imgPos: "62% 22%",
+    imgPos: "center 18%",
     eyebrow: "Dr Robernei Marchezi",
     title: (
       <>
@@ -29,7 +29,7 @@ const slides = [
   },
   {
     img: "/assets/hero-flavio-new.jpeg",
-    imgPos: "60% 18%",
+    imgPos: "center 14%",
     eyebrow: "Dr Flavio Alencar",
     title: (
       <>
@@ -192,41 +192,62 @@ function Index() {
         {slides.map((s, i) => (
           <div
             key={i}
-            className="absolute inset-0 flex items-center transition-opacity duration-1000"
+            className="absolute inset-0 transition-opacity duration-1000"
             style={{ opacity: current === i ? 1 : 0, pointerEvents: current === i ? "auto" : "none" }}
           >
-            <img
-              key={`${i}-${current === i}`}
-              src={s.img}
-              alt=""
-              className={`absolute inset-0 w-full h-full object-cover ${current === i ? "slide-img-anim" : ""}`}
-              style={{ objectPosition: s.imgPos }}
-            />
-            <div
-              className="absolute inset-0 z-[1]"
-              style={{
-                background:
-                  "linear-gradient(90deg, rgba(15,26,46,.94) 0%, rgba(15,26,46,.75) 42%, rgba(15,26,46,.35) 75%, rgba(15,26,46,.15) 100%)",
-              }}
-            />
-            {/* subtle gold vignette */}
-            <div
-              className="absolute inset-0 z-[1] pointer-events-none"
-              style={{ background: "radial-gradient(ellipse at 20% 80%, rgba(201,161,90,.15), transparent 55%)" }}
-            />
-            <div className="relative z-[2] max-w-[1280px] mx-auto px-4 sm:px-8 md:px-12 w-full">
-              <div className="max-w-[880px]">
-                <span className="hero-eyebrow mb-7">{s.eyebrow}</span>
-                <h1 className="hero-display mt-6 mb-8">{s.title}</h1>
-                <p className="text-cream/90 text-[19px] md:text-[20px] leading-relaxed max-w-[560px] mb-10 font-light">
-                  {s.text}
-                </p>
-                <div className="flex gap-4 flex-wrap">
-                  {s.btns.map((b, k) => (
-                    <Btn key={k} href={b.href} variant={b.solid ? "gold" : "ghost"}>
-                      {b.label}
-                    </Btn>
-                  ))}
+            {/* Photo panel - full bleed on mobile, kept to the right side on desktop */}
+            <div className="absolute top-0 right-0 h-full w-full md:w-[60%] lg:w-[56%] overflow-hidden">
+              <img
+                key={`${i}-${current === i}`}
+                src={s.img}
+                alt=""
+                className={`absolute inset-0 w-full h-full object-cover ${current === i ? "slide-img-anim" : ""}`}
+                style={{ objectPosition: s.imgPos }}
+              />
+              {/* mobile: diagonal gradient so the text stays readable over the full-bleed photo */}
+              <div
+                className="absolute inset-0 pointer-events-none md:hidden"
+                style={{
+                  background:
+                    "linear-gradient(90deg, rgba(15,26,46,.94) 0%, rgba(15,26,46,.75) 42%, rgba(15,26,46,.35) 75%, rgba(15,26,46,.15) 100%)",
+                }}
+              />
+              {/* desktop: lateral gradient blending the photo into the navy text panel */}
+              <div
+                className="absolute inset-y-0 left-0 w-2/5 pointer-events-none hidden md:block"
+                style={{
+                  background:
+                    "linear-gradient(90deg, var(--navy) 0%, rgba(15,26,46,.85) 30%, rgba(15,26,46,.35) 65%, rgba(15,26,46,0) 100%)",
+                }}
+              />
+              {/* desktop: soft top/bottom fade so the photo sits cleanly in the frame */}
+              <div
+                className="absolute inset-0 pointer-events-none hidden md:block"
+                style={{ background: "linear-gradient(180deg, rgba(15,26,46,.35) 0%, transparent 18%, transparent 78%, rgba(15,26,46,.4) 100%)" }}
+              />
+              {/* subtle gold vignette */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{ background: "radial-gradient(ellipse at 70% 85%, rgba(201,161,90,.12), transparent 55%)" }}
+              />
+            </div>
+
+            {/* Text panel - transparent, sits over the mobile gradient / beside the desktop photo panel */}
+            <div className="relative z-[2] h-full flex items-center">
+              <div className="max-w-[1280px] mx-auto px-4 sm:px-8 md:px-12 w-full">
+                <div className="max-w-[620px] md:max-w-[520px]">
+                  <span className="hero-eyebrow mb-7">{s.eyebrow}</span>
+                  <h1 className="hero-display mt-6 mb-8">{s.title}</h1>
+                  <p className="text-cream/90 text-[19px] md:text-[20px] leading-relaxed max-w-[560px] mb-10 font-light">
+                    {s.text}
+                  </p>
+                  <div className="flex gap-4 flex-wrap">
+                    {s.btns.map((b, k) => (
+                      <Btn key={k} href={b.href} variant={b.solid ? "gold" : "ghost"}>
+                        {b.label}
+                      </Btn>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
