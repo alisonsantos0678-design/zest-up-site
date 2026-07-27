@@ -20,7 +20,7 @@ const slides = [
         Duas especialidades, <em className="gold-text not-italic">uma única</em> dedicação a você
       </>
     ),
-    text: "Advocacia criminal e trabalhista conduzida com ética, técnica e proximidade em cada etapa do processo.",
+    text: "Advocacia Cível, Trabalhista, Previdenciária e Criminal.",
     btns: [
       { href: "#contato", label: "Fale com um Especialista", solid: true },
       { href: "#areas", label: "Conhecer Áreas de Atuação" },
