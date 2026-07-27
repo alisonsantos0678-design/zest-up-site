@@ -28,7 +28,7 @@ const slides = [
   },
   {
     img: robernei1.url,
-    eyebrow: "Dr Flavio Alencar · Direito Criminal",
+    eyebrow: "Dr Flavio Alencar",
     title: (
       <>
         Defesa técnica em casos de <em className="gold-text not-italic">violência doméstica</em>
