@@ -13,21 +13,8 @@ export const Route = createFileRoute("/")({
 
 const slides = [
   {
-    img: "/assets/hero-flavio-new.jpeg",
-    eyebrow: "Dr Flavio Alencar",
-    title: (
-      <>
-        Advocacia <em className="gold-text not-italic">Cível, Trabalhista, Previdenciária e Criminal</em>
-      </>
-    ),
-    text: "",
-    btns: [
-      { href: "#contato", label: "Falar com Dr Flavio Alencar", solid: true },
-      { href: "#sobre", label: "Conhecer o Advogado" },
-    ],
-  },
-  {
     img: "/assets/hero-robernei-new.jpeg",
+    imgPos: "62% 22%",
     eyebrow: "Dr Robernei Marchezi",
     title: (
       <>
@@ -37,6 +24,21 @@ const slides = [
     text: "",
     btns: [
       { href: "#contato", label: "Falar com Dr Robernei Marchezi", solid: true },
+      { href: "#sobre", label: "Conhecer o Advogado" },
+    ],
+  },
+  {
+    img: "/assets/hero-flavio-new.jpeg",
+    imgPos: "60% 18%",
+    eyebrow: "Dr Flavio Alencar",
+    title: (
+      <>
+        Advocacia <em className="gold-text not-italic">Cível, Trabalhista, Previdenciária e Criminal</em>
+      </>
+    ),
+    text: "",
+    btns: [
+      { href: "#contato", label: "Falar com Dr Flavio Alencar", solid: true },
       { href: "#sobre", label: "Conhecer o Advogado" },
     ],
   },
@@ -58,13 +60,13 @@ const areas = [
   {
     num: "03",
     title: "Direito de Família",
-    tag: "Dr Robernei Marchezi",
+    tag: "Alencar & Marchezi",
     desc: "Condução de processos de divórcio, guarda, pensão alimentícia, partilha de bens e reconhecimento de união estável, com atendimento humanizado em momentos que exigem sensibilidade e clareza. O objetivo é garantir que os direitos de cada membro da família sejam respeitados, buscando sempre a via mais rápida e menos desgastante para todos os envolvidos.",
   },
   {
     num: "04",
     title: "Inventário e Sucessões",
-    tag: "Dr Robernei Marchezi",
+    tag: "Alencar & Marchezi",
     desc: "Orientação jurídica completa para a abertura de inventário, judicial ou extrajudicial, com atenção ao prazo legal de sessenta dias após o falecimento para evitar multas sobre o imposto de transmissão. O acompanhamento cuida da partilha justa dos bens, do respeito a vontade do falecido e da tranquilidade da família para seguir em frente.",
   },
   {
@@ -198,7 +200,7 @@ function Index() {
               src={s.img}
               alt=""
               className={`absolute inset-0 w-full h-full object-cover ${current === i ? "slide-img-anim" : ""}`}
-              style={{ objectPosition: "center 15%" }}
+              style={{ objectPosition: s.imgPos }}
             />
             <div
               className="absolute inset-0 z-[1]"
@@ -459,7 +461,7 @@ function Index() {
                   <div className="w-10 h-10 border border-gold flex items-center justify-center text-gold font-serif shrink-0">R</div>
                   <div>
                     <strong className="block text-navy text-[15px]">Dr Robernei Marchezi</strong>
-                    <span className="text-ink-soft text-[14.5px]">OAB/SP 315.121 · (19) 99292 7879</span>
+                    <span className="text-ink-soft text-[14.5px]">OAB/SP 315.121</span>
                   </div>
                 </div>
               </div>
