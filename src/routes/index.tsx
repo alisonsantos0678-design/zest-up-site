@@ -15,21 +15,6 @@ const slides = [
   {
     img: "/assets/hero-flavio-new.jpeg",
     imgPos: "center 14%",
-    eyebrow: "Dr Flavio Alencar",
-    title: (
-      <>
-        Advocacia <em className="gold-text not-italic">Cível, Trabalhista, Previdenciária e Criminal</em>
-      </>
-    ),
-    text: "",
-    btns: [
-      { href: "#contato", label: "Falar com Dr Flavio Alencar", solid: true },
-      { href: "#sobre", label: "Conhecer o Advogado" },
-    ],
-  },
-  {
-    img: "/assets/hero-robernei-new.jpeg",
-    imgPos: "center 18%",
     eyebrow: "Dr Robernei Marchezi",
     title: (
       <>
@@ -39,6 +24,21 @@ const slides = [
     text: "",
     btns: [
       { href: "#contato", label: "Falar com Dr Robernei Marchezi", solid: true },
+      { href: "#sobre", label: "Conhecer o Advogado" },
+    ],
+  },
+  {
+    img: "/assets/hero-robernei-new.jpeg",
+    imgPos: "center 18%",
+    eyebrow: "Dr Flavio Alencar",
+    title: (
+      <>
+        Advocacia <em className="gold-text not-italic">Cível, Trabalhista, Previdenciária e Criminal</em>
+      </>
+    ),
+    text: "",
+    btns: [
+      { href: "#contato", label: "Falar com Dr Flavio Alencar", solid: true },
       { href: "#sobre", label: "Conhecer o Advogado" },
     ],
   },
