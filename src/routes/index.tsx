@@ -17,10 +17,10 @@ const slides = [
     eyebrow: "Dr Flavio Alencar",
     title: (
       <>
-        Defesa técnica em casos de <em className="gold-text not-italic">violência doméstica</em>
+        Advocacia <em className="gold-text not-italic">Cível, Trabalhista, Previdenciária e Criminal</em>
       </>
     ),
-    text: "Atuação criminal especializada, conduzida com rigor técnico, sigilo e respeito a cada parte envolvida.",
+    text: "",
     btns: [
       { href: "#contato", label: "Falar com Dr Flavio Alencar", solid: true },
       { href: "#sobre", label: "Conhecer o Advogado" },
@@ -31,10 +31,10 @@ const slides = [
     eyebrow: "Dr Robernei Marchezi",
     title: (
       <>
-        Seus direitos <em className="gold-text not-italic">trabalhistas</em> defendidos com solidez
+        Advocacia <em className="gold-text not-italic">Cível, Trabalhista, Previdenciária e Criminal</em>
       </>
     ),
-    text: "Assessoria completa em causas trabalhistas, familiares e cíveis, com orientação clara do início ao fim.",
+    text: "",
     btns: [
       { href: "#contato", label: "Falar com Dr Robernei Marchezi", solid: true },
       { href: "#sobre", label: "Conhecer o Advogado" },
@@ -52,7 +52,7 @@ const areas = [
   {
     num: "02",
     title: "Direito Trabalhista",
-    tag: "Dr Robernei Marchezi",
+    tag: "Alencar & Marchezi",
     desc: "Assessoria completa para trabalhadores e empregadores em questões relacionadas a rescisão, verbas rescisórias, horas extras, assédio moral, acidentes de trabalho e demais direitos previstos na legislação trabalhista. O acompanhamento inclui orientação prévia, tentativa de acordo e, quando necessário, ajuizamento de ação para garantir o cumprimento dos direitos do cliente.",
   },
   {
@@ -70,13 +70,13 @@ const areas = [
   {
     num: "05",
     title: "Direito Civil",
-    tag: "Dr Robernei Marchezi",
+    tag: "Alencar & Marchezi",
     desc: "Atuação em contratos, cobranças, indenizações e demais questões cíveis, com análise detalhada de cada situação para propor a estratégia mais segura ao cliente. O escritório acompanha o processo do início ao fim, mantendo o cliente informado sobre cada etapa e decisão do caso.",
   },
   {
     num: "06",
     title: "Previdenciário",
-    tag: "Alencar & Marchezi",
+    tag: "Dr Robernei Marchezi",
     desc: "Através de parceria atuamos em ações relacionadas a aposentadorias, auxílio acidente, auxílio reclusão, pensão por morte, salário família, salário maternidade, benefícios assistenciais e de legislação específica, entre outros.",
   },
 ];
