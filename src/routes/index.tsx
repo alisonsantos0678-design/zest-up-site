@@ -42,7 +42,7 @@ const slides = [
   },
   {
     img: flavio1.url,
-    eyebrow: "Dr Robernei Marchezi · Direito Trabalhista",
+    eyebrow: "Dr Robernei Marchezi",
     title: (
       <>
         Seus direitos <em className="gold-text not-italic">trabalhistas</em> defendidos com solidez
