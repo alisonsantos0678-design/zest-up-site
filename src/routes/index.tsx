@@ -13,21 +13,6 @@ export const Route = createFileRoute("/")({
 
 const slides = [
   {
-    img: "/assets/hero-robernei-new.jpeg",
-    imgPos: "center 18%",
-    eyebrow: "Dr Robernei Marchezi",
-    title: (
-      <>
-        Advocacia <em className="gold-text not-italic">Cível, Trabalhista, Previdenciária e Criminal</em>
-      </>
-    ),
-    text: "",
-    btns: [
-      { href: "#contato", label: "Falar com Dr Robernei Marchezi", solid: true },
-      { href: "#sobre", label: "Conhecer o Advogado" },
-    ],
-  },
-  {
     img: "/assets/hero-flavio-new.jpeg",
     imgPos: "center 14%",
     eyebrow: "Dr Flavio Alencar",
@@ -39,6 +24,21 @@ const slides = [
     text: "",
     btns: [
       { href: "#contato", label: "Falar com Dr Flavio Alencar", solid: true },
+      { href: "#sobre", label: "Conhecer o Advogado" },
+    ],
+  },
+  {
+    img: "/assets/hero-robernei-new.jpeg",
+    imgPos: "center 18%",
+    eyebrow: "Dr Robernei Marchezi",
+    title: (
+      <>
+        Advocacia <em className="gold-text not-italic">Cível, Trabalhista, Previdenciária e Criminal</em>
+      </>
+    ),
+    text: "",
+    btns: [
+      { href: "#contato", label: "Falar com Dr Robernei Marchezi", solid: true },
       { href: "#sobre", label: "Conhecer o Advogado" },
     ],
   },
@@ -214,16 +214,16 @@ function Index() {
               />
               {/* desktop: lateral gradient blending the photo into the navy text panel */}
               <div
-                className="absolute inset-y-0 left-0 w-2/5 pointer-events-none hidden md:block"
+                className="absolute inset-y-0 left-0 w-1/3 pointer-events-none hidden md:block"
                 style={{
                   background:
-                    "linear-gradient(90deg, var(--navy) 0%, rgba(15,26,46,.85) 30%, rgba(15,26,46,.35) 65%, rgba(15,26,46,0) 100%)",
+                    "linear-gradient(90deg, rgba(15,26,46,.55) 0%, rgba(15,26,46,.28) 45%, rgba(15,26,46,0) 100%)",
                 }}
               />
               {/* desktop: soft top/bottom fade so the photo sits cleanly in the frame */}
               <div
                 className="absolute inset-0 pointer-events-none hidden md:block"
-                style={{ background: "linear-gradient(180deg, rgba(15,26,46,.35) 0%, transparent 18%, transparent 78%, rgba(15,26,46,.4) 100%)" }}
+                style={{ background: "linear-gradient(180deg, rgba(15,26,46,.18) 0%, transparent 20%, transparent 80%, rgba(15,26,46,.22) 100%)" }}
               />
               {/* subtle gold vignette */}
               <div
@@ -235,7 +235,7 @@ function Index() {
             {/* Text panel - transparent, sits over the mobile gradient / beside the desktop photo panel */}
             <div className="relative z-[2] h-full flex items-center">
               <div className="max-w-[1280px] mx-auto px-4 sm:px-8 md:px-12 w-full">
-                <div className="max-w-[620px] md:max-w-[520px]">
+                <div className="max-w-[620px]">
                   <span className="hero-eyebrow mb-7">{s.eyebrow}</span>
                   <h1 className="hero-display mt-6 mb-8">{s.title}</h1>
                   <p className="text-cream/90 text-[19px] md:text-[20px] leading-relaxed max-w-[560px] mb-10 font-light">
