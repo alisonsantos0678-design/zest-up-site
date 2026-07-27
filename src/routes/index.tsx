@@ -20,7 +20,7 @@ const slides = [
         Duas especialidades, <em className="gold-text not-italic">uma única</em> dedicação a você
       </>
     ),
-    text: "Advocacia criminal e trabalhista conduzida com ética, técnica e proximidade em cada etapa do processo.",
+    text: "Advocacia Cível, Trabalhista, Previdenciária e Criminal.",
     btns: [
       { href: "#contato", label: "Fale com um Especialista", solid: true },
       { href: "#areas", label: "Conhecer Áreas de Atuação" },
@@ -28,7 +28,7 @@ const slides = [
   },
   {
     img: robernei1.url,
-    eyebrow: "Dr Flavio Alencar · Direito Criminal",
+    eyebrow: "Dr Flavio Alencar",
     title: (
       <>
         Defesa técnica em casos de <em className="gold-text not-italic">violência doméstica</em>
@@ -42,7 +42,7 @@ const slides = [
   },
   {
     img: flavio1.url,
-    eyebrow: "Dr Robernei Marchezi · Direito Trabalhista",
+    eyebrow: "Dr Robernei Marchezi",
     title: (
       <>
         Seus direitos <em className="gold-text not-italic">trabalhistas</em> defendidos com solidez
@@ -86,6 +86,12 @@ const areas = [
     title: "Direito Civil",
     tag: "Dr Robernei Marchezi",
     desc: "Atuação em contratos, cobranças, indenizações e demais questões cíveis, com análise detalhada de cada situação para propor a estratégia mais segura ao cliente. O escritório acompanha o processo do início ao fim, mantendo o cliente informado sobre cada etapa e decisão do caso.",
+  },
+  {
+    num: "06",
+    title: "Previdenciário",
+    tag: "Alencar & Marchezi",
+    desc: "Através de parceria atuamos em ações relacionadas a aposentadorias, auxílio acidente, auxílio reclusão, pensão por morte, salário família, salário maternidade, benefícios assistenciais e de legislação específica, entre outros.",
   },
 ];
 
@@ -301,34 +307,22 @@ function Index() {
             {[
               {
                 img: robernei2.url,
-                role: "Direito Criminal",
                 name: "Dr Flavio Alencar",
                 paras: [
-                  "Advogado criminalista com atuação dedicada a casos de violência doméstica, oferecendo defesa técnica atenta as particularidades de cada processo e ao amparo legal das partes envolvidas.",
-                  "Sua atuação une conhecimento processual penal e sensibilidade para lidar com situações de grande complexidade emocional, sempre pautado pelo sigilo e pela conduta ética.",
+                  "Advogado com atuação dedicada e atenta às particularidades de cada processo, oferecendo amparo jurídico às partes envolvidas com sigilo e conduta ética.",
+                  "Sua atuação une conhecimento processual e sensibilidade para lidar com situações de grande complexidade emocional.",
                 ],
-                items: [
-                  "Bacharel em Direito, com habilitação para atuação em todo o território nacional",
-                  "Especialização em Direito Penal e Processual Penal",
-                  "Atuação focada em Direito Criminal, com ênfase em Violência Doméstica",
-                  "Inscrito na Ordem dos Advogados do Brasil",
-                ],
+                bio: "FLÁVIO DE ALENCAR GONÇALVES é advogado, inscrito na OAB/SP nº 471.177, graduado em Direito pela Faculdade Policamp Campinas. Possui especialização nas áreas de Direito Bancário, Direito Imobiliário e Direito de Trânsito, além de Pós-Graduação em Direito e Processo do Trabalho pela PROORDEM. Exerce a advocacia com dedicação, ética e comprometimento, buscando oferecer soluções jurídicas eficazes e atendimento personalizado aos seus clientes.",
                 cta: "Falar com Dr Flavio Alencar",
               },
               {
                 img: flavio2.url,
-                role: "Direito Trabalhista",
                 name: "Dr Robernei Marchezi",
                 paras: [
-                  "Advogado trabalhista com atuação ampla, incluindo também causas familiares, cíveis e sucessórias, conduzindo cada caso com orientação clara e soluções eficientes para o cliente.",
+                  "Advogado com atuação ampla em causas cíveis, trabalhistas, familiares e sucessórias, conduzindo cada caso com orientação clara e soluções eficientes para o cliente.",
                   "Sua trajetória é marcada pelo atendimento humanizado, buscando sempre a via mais rápida e segura para a resolução de cada demanda, seja judicial ou extrajudicial.",
                 ],
-                items: [
-                  "Bacharel em Direito, OAB/SP 315.121",
-                  "Especialização em Direito do Trabalho e Direito Civil",
-                  "Atuação em causas Trabalhistas, Famíliares, Cíveis e Inventários",
-                  "Atendimento humanizado com foco em soluções eficientes",
-                ],
+                bio: "ROBERNEI MARCHEZI é advogado, inscrito na OAB/SP nº 315.121, graduado em Direito pelas Faculdades Integradas Metropolitanas de Campinas (METROCAMP). Possui especialização em Direito do Consumidor e Direito de Família, além de Pós-Graduação em Direito e Processo do Trabalho pela ESAMC/PROORDEM. Atua com compromisso, ética e excelência na prestação de serviços jurídicos, buscando soluções seguras e eficazes para a defesa dos interesses de seus clientes.",
                 cta: "Falar com Dr Robernei Marchezi",
               },
             ].map((law) => (
@@ -350,7 +344,6 @@ function Index() {
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
                 </div>
                 <div className="px-5 pt-7 pb-8 sm:px-9 sm:pt-9 sm:pb-10">
-                  <span className="block italic text-gold text-[13.5px] tracking-widest uppercase mb-2">{law.role}</span>
                   <h3 className="text-[29px] mb-4">{law.name}</h3>
                   {law.paras.map((p, i) => (
                     <p key={i} className="text-ink-soft text-[15.5px] mb-3.5">
@@ -361,13 +354,7 @@ function Index() {
                     <span className="block text-xs tracking-[0.1em] uppercase text-navy mb-2.5 font-semibold">
                       Formação e Atuação
                     </span>
-                    <ul className="list-none">
-                      {law.items.map((it) => (
-                        <li key={it} className="relative pl-4 text-ink-soft text-[14.5px] mb-2 before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-1.5 before:h-px before:bg-gold">
-                          {it}
-                        </li>
-                      ))}
-                    </ul>
+                    <p className="text-ink-soft text-[14.5px] leading-relaxed">{law.bio}</p>
                   </div>
                   <Btn href="#contato" className="w-full justify-center mt-7">
                     {law.cta}
@@ -479,7 +466,7 @@ function Index() {
                   <div className="w-10 h-10 border border-gold flex items-center justify-center text-gold font-serif shrink-0">F</div>
                   <div>
                     <strong className="block text-navy text-[15px]">Dr Flavio Alencar</strong>
-                    <span className="text-ink-soft text-[14.5px]">Direito Criminal, Violência Doméstica</span>
+                    <span className="text-ink-soft text-[14.5px]">OAB/SP 471.177</span>
                   </div>
                 </div>
                 <div className="flex gap-3.5 items-start">
