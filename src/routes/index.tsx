@@ -307,18 +307,12 @@ function Index() {
             {[
               {
                 img: robernei2.url,
-                role: "Direito Criminal",
                 name: "Dr Flavio Alencar",
                 paras: [
-                  "Advogado criminalista com atuação dedicada a casos de violência doméstica, oferecendo defesa técnica atenta as particularidades de cada processo e ao amparo legal das partes envolvidas.",
-                  "Sua atuação une conhecimento processual penal e sensibilidade para lidar com situações de grande complexidade emocional, sempre pautado pelo sigilo e pela conduta ética.",
+                  "Advogado com atuação dedicada e atenta às particularidades de cada processo, oferecendo amparo jurídico às partes envolvidas com sigilo e conduta ética.",
+                  "Sua atuação une conhecimento processual e sensibilidade para lidar com situações de grande complexidade emocional.",
                 ],
-                items: [
-                  "Bacharel em Direito, com habilitação para atuação em todo o território nacional",
-                  "Especialização em Direito Penal e Processual Penal",
-                  "Atuação focada em Direito Criminal, com ênfase em Violência Doméstica",
-                  "Inscrito na Ordem dos Advogados do Brasil",
-                ],
+                bio: "FLÁVIO DE ALENCAR GONÇALVES é advogado, inscrito na OAB/SP nº 471.177, graduado em Direito pela Faculdade Policamp Campinas. Possui especialização nas áreas de Direito Bancário, Direito Imobiliário e Direito de Trânsito, além de Pós-Graduação em Direito e Processo do Trabalho pela PROORDEM. Exerce a advocacia com dedicação, ética e comprometimento, buscando oferecer soluções jurídicas eficazes e atendimento personalizado aos seus clientes.",
                 cta: "Falar com Dr Flavio Alencar",
               },
               {
