@@ -317,18 +317,12 @@ function Index() {
               },
               {
                 img: flavio2.url,
-                role: "Direito Trabalhista",
                 name: "Dr Robernei Marchezi",
                 paras: [
-                  "Advogado trabalhista com atuação ampla, incluindo também causas familiares, cíveis e sucessórias, conduzindo cada caso com orientação clara e soluções eficientes para o cliente.",
+                  "Advogado com atuação ampla em causas cíveis, trabalhistas, familiares e sucessórias, conduzindo cada caso com orientação clara e soluções eficientes para o cliente.",
                   "Sua trajetória é marcada pelo atendimento humanizado, buscando sempre a via mais rápida e segura para a resolução de cada demanda, seja judicial ou extrajudicial.",
                 ],
-                items: [
-                  "Bacharel em Direito, OAB/SP 315.121",
-                  "Especialização em Direito do Trabalho e Direito Civil",
-                  "Atuação em causas Trabalhistas, Famíliares, Cíveis e Inventários",
-                  "Atendimento humanizado com foco em soluções eficientes",
-                ],
+                bio: "ROBERNEI MARCHEZI é advogado, inscrito na OAB/SP nº 315.121, graduado em Direito pelas Faculdades Integradas Metropolitanas de Campinas (METROCAMP). Possui especialização em Direito do Consumidor e Direito de Família, além de Pós-Graduação em Direito e Processo do Trabalho pela ESAMC/PROORDEM. Atua com compromisso, ética e excelência na prestação de serviços jurídicos, buscando soluções seguras e eficazes para a defesa dos interesses de seus clientes.",
                 cta: "Falar com Dr Robernei Marchezi",
               },
             ].map((law) => (
