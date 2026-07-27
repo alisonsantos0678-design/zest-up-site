@@ -13,8 +13,8 @@ export const Route = createFileRoute("/")({
 
 const slides = [
   {
-    img: "/assets/hero-robernei-new.jpeg",
-    imgPos: "center 18%",
+    img: "/assets/hero-flavio-new.jpeg",
+    imgPos: "center 14%",
     eyebrow: "Dr Flavio Alencar",
     title: (
       <>
@@ -28,8 +28,8 @@ const slides = [
     ],
   },
   {
-    img: "/assets/hero-flavio-new.jpeg",
-    imgPos: "center 14%",
+    img: "/assets/hero-robernei-new.jpeg",
+    imgPos: "center 18%",
     eyebrow: "Dr Robernei Marchezi",
     title: (
       <>
@@ -217,13 +217,13 @@ function Index() {
                 className="absolute inset-y-0 left-0 w-1/2 pointer-events-none hidden md:block"
                 style={{
                   background:
-                    "linear-gradient(90deg, var(--navy) 0%, rgba(15,26,46,.8) 22%, rgba(15,26,46,.45) 50%, rgba(15,26,46,.12) 80%, rgba(15,26,46,0) 100%)",
+                    "linear-gradient(90deg, var(--navy) 0%, rgba(15,26,46,.92) 25%, rgba(15,26,46,.62) 50%, rgba(15,26,46,.25) 75%, rgba(15,26,46,0) 100%)",
                 }}
               />
               {/* desktop: soft top/bottom fade so the photo sits cleanly in the frame */}
               <div
                 className="absolute inset-0 pointer-events-none hidden md:block"
-                style={{ background: "linear-gradient(180deg, rgba(15,26,46,.25) 0%, transparent 20%, transparent 80%, rgba(15,26,46,.3) 100%)" }}
+                style={{ background: "linear-gradient(180deg, rgba(15,26,46,.3) 0%, transparent 20%, transparent 80%, rgba(15,26,46,.35) 100%)" }}
               />
               {/* subtle gold vignette */}
               <div
