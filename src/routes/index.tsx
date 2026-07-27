@@ -466,7 +466,7 @@ function Index() {
                   <div className="w-10 h-10 border border-gold flex items-center justify-center text-gold font-serif shrink-0">F</div>
                   <div>
                     <strong className="block text-navy text-[15px]">Dr Flavio Alencar</strong>
-                    <span className="text-ink-soft text-[14.5px]">Direito Criminal, Violência Doméstica</span>
+                    <span className="text-ink-soft text-[14.5px]">OAB/SP 471.177</span>
                   </div>
                 </div>
                 <div className="flex gap-3.5 items-start">
