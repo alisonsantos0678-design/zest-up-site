@@ -28,7 +28,7 @@ const slides = [
     ],
   },
   {
-    img: "/assets/hero-robernei-new.jpeg",
+    img: "/assets/hero-flavio-new.png",
     imgPos: "center 18%",
     eyebrow: "Dr Flavio Alencar",
     title: (
