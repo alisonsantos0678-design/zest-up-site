@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
 
 const slides = [
   {
-    img: "/assets/hero-flavio-new.jpeg",
+    img: "/assets/hero-marchezi-new.png",
     imgPos: "center 14%",
     eyebrow: "Dr Robernei Marchezi",
     title: (
@@ -28,7 +28,7 @@ const slides = [
     ],
   },
   {
-    img: "/assets/hero-robernei-new.jpeg",
+    img: "/assets/hero-flavio-new.png",
     imgPos: "center 18%",
     eyebrow: "Dr Flavio Alencar",
     title: (
