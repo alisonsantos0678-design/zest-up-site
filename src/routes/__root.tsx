@@ -85,8 +85,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Alencar & Marchezi Advogados Associados" },
       { name: "twitter:description", content: "Advocacia criminal e trabalhista com ética, técnica e atendimento humanizado. Dr Flavio Alencar e Dr Robernei Marchezi." },
-      { property: "og:image", content: "https://zest-up-site.lovable.app/assets/hero-marchezi-new.png" },
-      { name: "twitter:image", content: "https://zest-up-site.lovable.app/assets/hero-marchezi-new.png" },
+      { property: "og:image", content: "https://zest-up-site.lovable.app/assets/og-share.png" },
+      { name: "twitter:image", content: "https://zest-up-site.lovable.app/assets/og-share.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
