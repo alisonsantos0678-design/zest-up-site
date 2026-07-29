@@ -491,9 +491,39 @@ function Index() {
             <form
               className="bg-white border border-line p-6 sm:p-10 md:p-12 reveal relative"
               style={{ boxShadow: "var(--shadow-elegant)" }}
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                alert("Recebemos sua solicitação. Em breve entraremos em contato.");
+                const form = e.currentTarget;
+                const btn = form.querySelector("button[type=submit]") as HTMLButtonElement | null;
+                const data = new FormData(form);
+                if (btn) {
+                  btn.disabled = true;
+                  btn.textContent = "Enviando...";
+                }
+                try {
+                  const res = await fetch("https://aa-n8n.jzxocd.easypanel.host/webhook/novo-cliente-advogado", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      nome: data.get("nome"),
+                      telefone: data.get("telefone"),
+                      email: data.get("email"),
+                      assunto: data.get("assunto"),
+                      mensagem: data.get("mensagem"),
+                      origem: "site",
+                    }),
+                  });
+                  if (!res.ok) throw new Error("Falha no envio");
+                  alert("Recebemos sua solicitação. Em breve entraremos em contato pelo WhatsApp.");
+                  form.reset();
+                } catch (err) {
+                  alert("Não foi possível enviar agora. Tente novamente ou fale com a gente pelo WhatsApp.");
+                } finally {
+                  if (btn) {
+                    btn.disabled = false;
+                    btn.textContent = "Enviar Solicitação →";
+                  }
+                }
               }}
             >
               <div className="absolute -top-px left-0 right-0 h-px" style={{ background: "var(--gradient-gold)" }} />
@@ -503,9 +533,10 @@ function Index() {
               </p>
 
               {[
+                { id: "nome", label: "Nome", type: "text", ph: "Seu nome completo" },
                 { id: "email", label: "E mail", type: "email", ph: "seuemail@exemplo.com" },
                 { id: "telefone", label: "Telefone", type: "tel", ph: "(19) 99999 9999" },
-                { id: "causa", label: "Causa", type: "text", ph: "Descreva brevemente o seu caso" },
+                { id: "assunto", label: "Assunto", type: "text", ph: "Ex: Direito de Família" },
               ].map((f) => (
                 <div key={f.id} className="mb-5">
                   <label htmlFor={f.id} className="block text-[13px] tracking-wide text-navy mb-2 font-medium">
@@ -521,6 +552,20 @@ function Index() {
                   />
                 </div>
               ))}
+
+              <div className="mb-5">
+                <label htmlFor="mensagem" className="block text-[13px] tracking-wide text-navy mb-2 font-medium">
+                  Mensagem
+                </label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  placeholder="Descreva brevemente o seu caso"
+                  rows={4}
+                  required
+                  className="w-full px-3.5 py-3 border border-line bg-white text-ink text-[14.5px] focus:outline-none focus:border-gold transition resize-none"
+                />
+              </div>
 
               <button
                 type="submit"
